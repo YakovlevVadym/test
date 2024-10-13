@@ -1,0 +1,248 @@
+/*
+Theme Name: newtheme
+Theme URI: https://wordpress.org/themes/twentytwentyfour/
+Author: vadym
+Author URI: https://wordpress.org
+Description: Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
+Requires at least: 6.4
+Tested up to: 6.6
+Requires PHP: 7.0
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentytwentyfour
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  min-height: 100vh;
+  font-size: 18px;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  /* justify-content: center;
+  align-items: center;
+  display: flex; */
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 15px 0;
+}
+
+.top-section {
+  display: flex;
+  /* width: 1920px; */
+  min-height: 100vh;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.section {
+  width: 50%;
+  height: 100%;
+}
+.container {
+  max-width: 680px;
+  margin-left: 40px;
+  margin-top: 300px;
+  margin-left: 120px;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+/* * Navigation */
+.navigation {
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  padding: 0;
+  gap: 40px;
+}
+
+li {
+  display: inline;
+}
+
+.navigation a {
+  transition: color 0.3s;
+  text-decoration: none;
+  color: white;
+}
+
+.navigation a:hover {
+  color: orange;
+}
+
+p {
+  margin: 20px 0;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* * Button */
+.reserve-button {
+  margin-top: 50px;
+  padding: 15px 30px;
+  background-color: transparent;
+  border: 1px solid #ffa500;
+  color: #ffa500;
+  cursor: pointer;
+  font-size: 1rem;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+button:hover {
+  background-color: #ffa500;
+  color: #000;
+}
+
+.container-title {
+  font-size: 90px;
+  line-height: 135px;
+  letter-spacing: 8px;
+}
+
+.container-text {
+  font-weight: 400;
+}
+
+/* * Logo */
+.logo {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* *! Secttion 2 */
+
+/* .section-plate {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.plate-content {
+  width: 620px;
+  height: 620px;
+  gap: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plate-title {
+  color: #000;
+  position: absolute;
+  z-index: 990;
+  font-weight: 500;
+  text-align: center;
+  bottom: 64px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.plate-text {
+  color: #000;
+  position: absolute;
+  z-index: 990;
+  font-weight: 500;
+  text-align: center;
+  bottom: 30px;
+} */
+
+.section-plate {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.plate-content {
+  width: 680px;
+  height: 680px;
+  gap: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plate-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  z-index: 500;
+}
+
+.plate-title {
+  position: absolute;
+  text-align: center;
+  letter-spacing: 4px;
+  font-weight: 500;
+  z-index: 990;
+  bottom: 64px;
+  font-size: 26px;
+}
+
+.plate-text {
+  position: absolute;
+  z-index: 990;
+  font-weight: 500;
+  text-align: center;
+  bottom: 30px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* * Circle */
+
+.circle-button {
+  background-color: #f8a44e;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50%;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -640px;
+  margin-left: 300px;
+  color: #090909;
+  height: 120px;
+  display: flex;
+  width: 120px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.circle-button:hover {
+  background-color: #e09445;
+}
